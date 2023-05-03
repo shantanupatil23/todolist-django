@@ -1,0 +1,2 @@
+# todolist-django
+django practice
