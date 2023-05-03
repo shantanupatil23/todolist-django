@@ -1,2 +1,2 @@
 # todolist-django
-django practice
+A simple todo list application built with Django, featuring task creation, viewing, updating, deleting, completion marking, and PostgreSQL database storage.
