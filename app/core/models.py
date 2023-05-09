@@ -29,6 +29,7 @@ class UserManager(BaseUserManager):
 
     def create_superuser(self, username, password):
         user = self.create_user(username, password)
+        user.is_staff = True
         user.is_superuser = True
         user.save(using=self._db)
 
@@ -39,6 +40,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     """User in the system."""
 
     username = models.CharField(max_length=255, unique=True)
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
 
     objects = UserManager()
 
